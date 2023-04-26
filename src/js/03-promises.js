@@ -12,7 +12,7 @@ function createPromise(position, delay) {
     }, delay);
   });
 }
-
+ 
 const form = document.querySelector('.form');
 form.addEventListener('submit', onCreateClick);
 
