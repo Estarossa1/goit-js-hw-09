@@ -12,7 +12,7 @@ function createPromise(position, delay) {
     }, delay);
   });
 }
- 
+
 const form = document.querySelector('.form');
 form.addEventListener('submit', onCreateClick);
 
@@ -25,7 +25,7 @@ function onCreateClick(e) {
 
   let inputDelay = Number(delay.value);
 
-  for (let i = 1; i < amount.value; i++) {
+  for (let i = 1; i <= amount.value; i++) {
     createPromise(i, inputDelay)
       .then(({position, delay}) => {
         Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
